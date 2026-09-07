@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://6kncvr4u151i"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sdrrl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7u1wl"]
+size = Vector2(1160, 24)
+
+[node name="Ground" type="StaticBody2D" unique_id=1193185014]
+physics_material_override = SubResource("PhysicsMaterial_sdrrl")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1091989511]
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_7u1wl")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=71785052]
+color = Color(0.25882354, 0.93333334, 0.18431373, 1)
+polygon = PackedVector2Array(-579, -10, -579, 14, 581, 14, 581, -10)
