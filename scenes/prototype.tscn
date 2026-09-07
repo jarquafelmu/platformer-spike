@@ -16,7 +16,7 @@ size = Vector2(337.75, 21)
 [node name="Level" type="Node2D" unique_id=1987240509]
 
 [node name="Player" parent="." unique_id=1264734666 instance=ExtResource("1_ixygg")]
-position = Vector2(-440, 233)
+position = Vector2(-432, 264)
 
 [node name="Ground" type="StaticBody2D" parent="." unique_id=772687560]
 position = Vector2(75, 314)
@@ -28,7 +28,7 @@ position = Vector2(-75, 0)
 shape = SubResource("RectangleShape2D_7u1wl")
 
 [node name="Platform" type="StaticBody2D" parent="." unique_id=715028090]
-position = Vector2(66, 214)
+position = Vector2(72, 232)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform" unique_id=13642003]
@@ -36,7 +36,7 @@ z_index = -1
 shape = SubResource("RectangleShape2D_0stqu")
 
 [node name="Platform2" type="StaticBody2D" parent="." unique_id=1900863307]
-position = Vector2(312, 83)
+position = Vector2(336, 136)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=1348794602]

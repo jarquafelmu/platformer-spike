@@ -4,6 +4,12 @@ extends CharacterBody2D
 @export var jump_velocity: float = -450.0
 @export var acceleration: float = 1_000.0
 @export var deceleration: float = 2_200.0
+@export var fall_limit: float = 800.0
+
+var spawn_position: Vector2
+
+func _ready() -> void:
+	spawn_position = global_position
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -23,3 +29,10 @@ func _physics_process(delta: float) -> void:
 		velocity.y = jump_velocity
 		
 	move_and_slide()
+	
+	if global_position.y > fall_limit:
+		reset_player()
+		
+func reset_player() -> void:
+	global_position = spawn_position
+	velocity = Vector2.ZERO
