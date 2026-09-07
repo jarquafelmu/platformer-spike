@@ -3,19 +3,21 @@
 [ext_resource type="Script" uid="uid://bu6xkh4urfly3" path="res://scenes/hazard/hazard.gd" id="1_hh53t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u1wl"]
-size = Vector2(64, 24)
+size = Vector2(60, 24)
 
 [node name="Hazard" type="Area2D" unique_id=1005165900]
 script = ExtResource("1_hh53t")
+metadata/_edit_vertical_guides_ = [16.0]
+metadata/_edit_horizontal_guides_ = [32.0, -32.0]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1963868985]
+position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_7u1wl")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=2122865448]
-offset_left = -32.0
-offset_top = -12.0
-offset_right = 32.0
-offset_bottom = 12.0
-color = Color(0.9607843, 0.05882353, 0.19215687, 1)
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=735144197]
+position = Vector2(40, -8)
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-72, 24, -72, 16, -64, -8, -56, 16, -48, -8, -40, 16, -32, -8, -24, 16, -16, -8, -8, 16, -8, 24)
+uv = PackedVector2Array(-72, 24, -72, 16, -64, -8, -56, 16, -48, -8, -40, 16, -32, -8, -24, 16, -16, -8, -8, 16, -8, 24)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
