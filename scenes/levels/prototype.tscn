@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dfllchan42gcj"]
+
+[ext_resource type="PackedScene" uid="uid://cy7ssyt7arlo" path="res://scenes/platforms/platform.tscn" id="1_1qj2g"]
+[ext_resource type="PackedScene" uid="uid://7xj57solbb2k" path="res://scenes/character/player.tscn" id="2_odond"]
+[ext_resource type="PackedScene" uid="uid://bx5bwp1ajff86" path="res://scenes/hazard/hazard.tscn" id="3_76ncn"]
+[ext_resource type="PackedScene" uid="uid://cal2orypai3ls" path="res://scenes/collectible/collectible.tscn" id="4_jdskk"]
+[ext_resource type="PackedScene" uid="uid://jq4hgbnern7k" path="res://scenes/hud/hud.tscn" id="5_aeoad"]
+[ext_resource type="PackedScene" uid="uid://dhtcu3vlh8r6d" path="res://scenes/goal/goal.tscn" id="6_hhhrn"]
+[ext_resource type="PackedScene" uid="uid://6kncvr4u151i" path="res://scenes/platforms/ground.tscn" id="7_ar1yk"]
+
+[node name="Level" type="Node2D" unique_id=1987240509]
+
+[node name="Platform" parent="." unique_id=637181303 instance=ExtResource("1_1qj2g")]
+position = Vector2(512, 224)
+
+[node name="Platform2" parent="." unique_id=486497209 instance=ExtResource("1_1qj2g")]
+position = Vector2(656, 128)
+
+[node name="Player" parent="." unique_id=1264734666 instance=ExtResource("2_odond")]
+position = Vector2(48, 272)
+
+[node name="Hazard" parent="." unique_id=1005165900 instance=ExtResource("3_76ncn")]
+position = Vector2(648, 296)
+
+[node name="Hazard2" parent="." unique_id=346720916 instance=ExtResource("3_76ncn")]
+position = Vector2(648, 200)
+
+[node name="Collectible" parent="." unique_id=1606544099 instance=ExtResource("4_jdskk")]
+position = Vector2(392, 200)
+
+[node name="Collectible2" parent="." unique_id=734870289 instance=ExtResource("4_jdskk")]
+position = Vector2(504, 104)
+
+[node name="Collectible3" parent="." unique_id=779373908 instance=ExtResource("4_jdskk")]
+position = Vector2(680, 104)
+
+[node name="Hud" parent="." unique_id=1210022692 instance=ExtResource("5_aeoad")]
+
+[node name="Goal" parent="." unique_id=1614178454 instance=ExtResource("6_hhhrn")]
+position = Vector2(800, 88)
+
+[node name="Ground" parent="." unique_id=1193185014 instance=ExtResource("7_ar1yk")]
+position = Vector2(584, 320)
+
+[connection signal="collectible_count_changed" from="Player" to="Hud" method="_on_player_collectible_count_changed"]
+[connection signal="reached" from="Goal" to="Hud" method="_on_goal_reached"]

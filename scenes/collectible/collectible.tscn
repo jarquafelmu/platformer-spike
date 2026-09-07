@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cal2orypai3ls"]
 
-[ext_resource type="Script" uid="uid://bbqikfetvo0ft" path="res://scripts/collectible/visual.gd" id="1_gbci2"]
-[ext_resource type="Script" uid="uid://6ksdibf78miu" path="res://scripts/collectible/collectible.gd" id="1_j8pxs"]
+[ext_resource type="Script" uid="uid://bbqikfetvo0ft" path="res://scenes/collectible/visual.gd" id="1_gbci2"]
+[ext_resource type="Script" uid="uid://6ksdibf78miu" path="res://scenes/collectible/collectible.gd" id="1_j8pxs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0stqu"]
 radius = 12.0
