@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s4ll1"]
 size = Vector2(64, 64)
 
-[node name="Player" type="CharacterBody2D" unique_id=1264734666]
+[node name="Player" type="CharacterBody2D" unique_id=1264734666 groups=["player"]]
 script = ExtResource("1_tum32")
 metadata/_edit_group_ = true
 

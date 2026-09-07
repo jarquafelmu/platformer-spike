@@ -5,6 +5,8 @@
 [sub_resource type="LabelSettings" id="LabelSettings_7u1wl"]
 font_size = 24
 
+[sub_resource type="LabelSettings" id="LabelSettings_0stqu"]
+
 [node name="Hud" type="CanvasLayer" unique_id=1210022692]
 script = ExtResource("1_48c2t")
 
@@ -15,3 +17,11 @@ offset_right = 175.0
 offset_bottom = 50.0
 text = "Collectibles: 0"
 label_settings = SubResource("LabelSettings_7u1wl")
+
+[node name="GoalLabel" type="Label" parent="." unique_id=166190737]
+offset_left = 24.0
+offset_top = 48.0
+offset_right = 161.0
+offset_bottom = 71.0
+text = "LEVEL COMPLETE!"
+label_settings = SubResource("LabelSettings_0stqu")
