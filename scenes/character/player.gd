@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 signal collectible_count_changed(new_count: int)
+signal died
 
 @export var speed: float = 3_000.0
 @export var jump_velocity: float = -450.0
@@ -40,14 +41,14 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 	if global_position.y > fall_limit:
-		reset_player()
+		die()
 		
-func reset_player() -> void:
+func die() -> void:
 	if is_respawning: 
 		return
 		
 	is_respawning = true
-	get_tree().call_deferred("reload_current_scene")
+	died.emit()
 	
 func collect_item(value: int) -> void:
 	collectible_count += value

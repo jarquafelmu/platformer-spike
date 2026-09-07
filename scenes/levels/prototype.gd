@@ -15,3 +15,6 @@ func restart_level() -> void:
 	
 func _on_hud_restart_requested() -> void:
 	restart_level()
+
+func _on_player_died() -> void:
+	restart_level()

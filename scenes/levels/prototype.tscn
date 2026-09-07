@@ -45,5 +45,6 @@ position = Vector2(800, 88)
 position = Vector2(584, 320)
 
 [connection signal="collectible_count_changed" from="Player" to="Hud" method="_on_player_collectible_count_changed"]
+[connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="restart_requested" from="Hud" to="." method="_on_hud_restart_requested"]
 [connection signal="reached" from="Goal" to="Hud" method="_on_goal_reached"]
