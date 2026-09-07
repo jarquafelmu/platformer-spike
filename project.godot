@@ -54,8 +54,9 @@ move_down={
 
 [layer_names]
 
-2d_physics/layer_1="GROUND"
-2d_physics/layer_2="ONE_WAY_PLATFORM"
+2d_physics/layer_1="PLAYER"
+2d_physics/layer_2="GROUND"
+2d_physics/layer_3="ONE_WAY_PLATFORM"
 
 [physics]
 

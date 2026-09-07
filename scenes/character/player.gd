@@ -10,7 +10,7 @@ signal collectible_count_changed(new_count: int)
 @export var drop_through_duration: float = 0.25
 @export var drop_velocity: float = 100.0
 
-const ONE_WAY_PLATFORM_LAYER: int = 2
+const ONE_WAY_PLATFORM_LAYER: int = 3
 
 var collectible_count: int = 0
 var is_respawning: bool = false
