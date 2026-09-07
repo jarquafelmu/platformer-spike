@@ -10,6 +10,7 @@ signal died
 @export var fall_limit: float = 800.0
 @export var drop_through_duration: float = 0.25
 @export var drop_velocity: float = 100.0
+@export_range(0.0, 1.0, 0.05) var jump_cut_multiplier: float = 0.5
 
 const ONE_WAY_PLATFORM_LAYER: int = 3
 
@@ -46,6 +47,13 @@ func _physics_process(delta: float) -> void:
 		elif air_jump_available:
 			_perform_jump()
 			air_jump_available = false
+			
+	if (
+		Input.is_action_just_released("jump")
+		and not Input.is_action_pressed("jump")
+		and velocity.y < 0.0
+	):
+		velocity.y *= jump_cut_multiplier
 	
 	move_and_slide()
 	
