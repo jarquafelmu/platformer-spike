@@ -6,11 +6,8 @@ extends CharacterBody2D
 @export var deceleration: float = 2_200.0
 @export var fall_limit: float = 800.0
 
-var spawn_position: Vector2
 var collectible_count: int = 0
-
-func _ready() -> void:
-	spawn_position = global_position
+var is_respawning: bool = false
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -35,8 +32,11 @@ func _physics_process(delta: float) -> void:
 		reset_player()
 		
 func reset_player() -> void:
-	global_position = spawn_position
-	velocity = Vector2.ZERO
+	if is_respawning: 
+		return
+		
+	is_respawning = true
+	get_tree().call_deferred("reload_current_scene")
 	
 func collect_item(value: int) -> void:
 	collectible_count += value

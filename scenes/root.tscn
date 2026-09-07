@@ -42,3 +42,9 @@ position = Vector2(128, 200)
 
 [node name="Collectible" parent="." unique_id=1606544099 instance=ExtResource("4_sqa0i")]
 position = Vector2(-24, 200)
+
+[node name="Collectible2" parent="." unique_id=734870289 instance=ExtResource("4_sqa0i")]
+position = Vector2(136, 112)
+
+[node name="Collectible3" parent="." unique_id=779373908 instance=ExtResource("4_sqa0i")]
+position = Vector2(304, 112)
