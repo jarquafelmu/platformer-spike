@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cal2orypai3ls"]
+
+[ext_resource type="Script" uid="uid://bbqikfetvo0ft" path="res://scripts/collectible/visual.gd" id="1_gbci2"]
+[ext_resource type="Script" uid="uid://6ksdibf78miu" path="res://scripts/collectible/collectible.gd" id="1_j8pxs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0stqu"]
+radius = 12.0
+
+[node name="Collectible" type="Area2D" unique_id=1606544099]
+script = ExtResource("1_j8pxs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1918713198]
+shape = SubResource("CircleShape2D_0stqu")
+
+[node name="Visual" type="Node2D" parent="." unique_id=827437071]
+script = ExtResource("1_gbci2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

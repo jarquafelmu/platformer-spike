@@ -7,6 +7,7 @@ extends CharacterBody2D
 @export var fall_limit: float = 800.0
 
 var spawn_position: Vector2
+var collectible_count: int = 0
 
 func _ready() -> void:
 	spawn_position = global_position
@@ -36,3 +37,7 @@ func _physics_process(delta: float) -> void:
 func reset_player() -> void:
 	global_position = spawn_position
 	velocity = Vector2.ZERO
+	
+func collect_item(value: int) -> void:
+	collectible_count += value
+	print("Collectibles: ", collectible_count)
