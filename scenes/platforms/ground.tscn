@@ -6,6 +6,7 @@
 size = Vector2(1160, 24)
 
 [node name="Ground" type="StaticBody2D" unique_id=1193185014]
+collision_layer = 2
 physics_material_override = SubResource("PhysicsMaterial_sdrrl")
 metadata/_edit_group_ = true
 
