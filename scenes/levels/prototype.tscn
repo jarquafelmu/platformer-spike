@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dfllchan42gcj"]
 
 [ext_resource type="PackedScene" uid="uid://cy7ssyt7arlo" path="res://scenes/platforms/platform.tscn" id="1_1qj2g"]
+[ext_resource type="Script" uid="uid://rs5urh4koalr" path="res://scenes/levels/prototype.gd" id="1_odond"]
 [ext_resource type="PackedScene" uid="uid://7xj57solbb2k" path="res://scenes/character/player.tscn" id="2_odond"]
 [ext_resource type="PackedScene" uid="uid://bx5bwp1ajff86" path="res://scenes/hazard/hazard.tscn" id="3_76ncn"]
 [ext_resource type="PackedScene" uid="uid://cal2orypai3ls" path="res://scenes/collectible/collectible.tscn" id="4_jdskk"]
@@ -9,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://6kncvr4u151i" path="res://scenes/platforms/ground.tscn" id="7_ar1yk"]
 
 [node name="Level" type="Node2D" unique_id=1987240509]
+script = ExtResource("1_odond")
 
 [node name="Platform" parent="." unique_id=637181303 instance=ExtResource("1_1qj2g")]
 position = Vector2(512, 224)
@@ -43,4 +45,5 @@ position = Vector2(800, 88)
 position = Vector2(584, 320)
 
 [connection signal="collectible_count_changed" from="Player" to="Hud" method="_on_player_collectible_count_changed"]
+[connection signal="restart_requested" from="Hud" to="." method="_on_hud_restart_requested"]
 [connection signal="reached" from="Goal" to="Hud" method="_on_goal_reached"]

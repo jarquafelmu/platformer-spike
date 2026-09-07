@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+signal restart_requested
+
 @onready var collectible_label: Label = $CollectibleLabel
 @onready var goal_label: Label = $GoalLabel
 
@@ -11,3 +13,6 @@ func _on_player_collectible_count_changed(new_count: int) -> void:
 
 func _on_goal_reached() -> void:
 	goal_label.show()
+
+func _on_restart_button_pressed() -> void:
+	restart_requested.emit()

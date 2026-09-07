@@ -25,3 +25,14 @@ offset_right = 161.0
 offset_bottom = 71.0
 text = "LEVEL COMPLETE!"
 label_settings = SubResource("LabelSettings_0stqu")
+
+[node name="RestartButton" type="Button" parent="." unique_id=1852238702]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_top = 16.0
+offset_right = -16.0
+grow_horizontal = 0
+text = "Restart (R)"
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
