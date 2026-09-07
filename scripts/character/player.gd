@@ -6,6 +6,8 @@ extends CharacterBody2D
 @export var deceleration: float = 2_200.0
 @export var fall_limit: float = 800.0
 
+signal collectible_count_changed(new_count: int)
+
 var collectible_count: int = 0
 var is_respawning: bool = false
 
@@ -40,4 +42,4 @@ func reset_player() -> void:
 	
 func collect_item(value: int) -> void:
 	collectible_count += value
-	print("Collectibles: ", collectible_count)
+	collectible_count_changed.emit(collectible_count)

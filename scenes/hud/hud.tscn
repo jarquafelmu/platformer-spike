@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://jq4hgbnern7k"]
+
+[ext_resource type="Script" uid="uid://da763qdw6tpog" path="res://scenes/hud/hud.gd" id="1_48c2t"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7u1wl"]
+font_size = 24
+
+[node name="Hud" type="CanvasLayer" unique_id=1210022692]
+script = ExtResource("1_48c2t")
+
+[node name="CollectibleLabel" type="Label" parent="." unique_id=1876975988]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 175.0
+offset_bottom = 50.0
+text = "Collectibles: 0"
+label_settings = SubResource("LabelSettings_7u1wl")

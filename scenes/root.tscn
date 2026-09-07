@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://7xj57solbb2k" path="res://scenes/character/player.tscn" id="2_sqa0i"]
 [ext_resource type="PackedScene" uid="uid://bx5bwp1ajff86" path="res://scenes/hazard/hazard.tscn" id="3_jh1ax"]
 [ext_resource type="PackedScene" uid="uid://cal2orypai3ls" path="res://scenes/collectible/collectible.tscn" id="4_sqa0i"]
+[ext_resource type="PackedScene" uid="uid://jq4hgbnern7k" path="res://scenes/hud/hud.tscn" id="5_jh1ax"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sdrrl"]
 
@@ -48,3 +49,17 @@ position = Vector2(136, 112)
 
 [node name="Collectible3" parent="." unique_id=779373908 instance=ExtResource("4_sqa0i")]
 position = Vector2(304, 112)
+
+[node name="Hud" parent="." unique_id=1210022692 instance=ExtResource("5_jh1ax")]
+
+[node name="CollectibleLabel" parent="Hud" index="0" unique_id=1876975988]
+anchors_preset = -1
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 188.0
+offset_bottom = 54.0
+metadata/_edit_use_anchors_ = true
+
+[connection signal="collectible_count_changed" from="Player" to="Hud" method="_on_player_collectible_count_changed"]
+
+[editable path="Hud"]
