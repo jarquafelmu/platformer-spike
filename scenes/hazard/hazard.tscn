@@ -20,4 +20,10 @@ color = Color(1, 0, 0, 1)
 polygon = PackedVector2Array(-72, 24, -72, 16, -64, -8, -56, 16, -48, -8, -40, 16, -32, -8, -24, 16, -16, -8, -8, 16, -8, 24)
 uv = PackedVector2Array(-72, 24, -72, 16, -64, -8, -56, 16, -48, -8, -40, 16, -32, -8, -24, 16, -16, -8, -8, 16, -8, 24)
 
+[node name="LineStroke" type="Line2D" parent="." unique_id=983309840]
+points = PackedVector2Array(-32, 8, -24, -16, -16, 8, -8, -16, 0, 8, 8, -16, 16, 8, 24, -16, 32, 8, 32, 16, -32, 16)
+closed = true
+width = 0.5
+default_color = Color(0, 0, 0, 1)
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
